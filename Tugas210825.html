@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulir Pendaftaran Ekstrakurikuler</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 600px;
+    }
+    td {
+      padding: 8px;
+    }
+    td.label {
+      width: 200px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 60%;
+      padding: 2px;
+    }
+    .btn {
+      padding: 8px 16px;
+      margin: 5px;
+      font-size: 14px;
+    }
+
+    .btnRadio{
+        width: 10%;
+    }
+
+    .parRadio {
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Formulir Pendaftaran Ekstrakurikuler</h2>
+
+  <form action="#" method="post" enctype="multipart/form-data">
+    <table border="1">
+      <tr>
+        <td class="label">Nama Lengkap</td>
+        <td><input type="text" name="nama" value="Putra Radityaning Darius Pramono" required></td>
+      </tr>
+      <tr>
+        <td class="label">NISN</td>
+        <td><input type="number" name="nisn" required></td>
+      </tr>
+      <tr>
+        <td class="label">Jenis Kelamin</td>
+        <td>
+            <input type="radio" name="jk" class= "btnRadio" value="Laki-laki">
+            <label for="">Laki-laki</label>
+            <input type="radio" name="jk" class= "btnRadio" value="Perempuan">
+            <label for="">Perempuan</label>
+        </td>
+      </tr>
+      <tr>
+        <td class="label">Pilih Ekstrakurikuler</td>
+        <td>
+          <select name="ekstra" required>
+            <option value="">-- Pilih Ekstrakurikuler --</option>
+            <option value="ITNSA">ITNSA</option>
+            <option value="Pramuka">Pramuka</option>
+            <option value="Paskibra">Paskibra</option>
+            <option value="Basket">Basket</option>
+            <option value="Futsal">Futsal</option>
+            <option value="PMR">PMR</option>
+            <option value="Karya Ilmiah Remaja">Karya Ilmiah Remaja</option>
+            <option value="Seni Musik">Seni Musik</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td class="label">Alamat</td>
+        <td>
+          <textarea name="alamat" rows="3">Jl. Danau Batur</textarea>
+        </td>
+      </tr>
+      <tr>
+        <td class="label">Upload Pas Foto</td>
+        <td><input type="file" name="foto" accept="image/*"></td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align: center;">
+          <input type="submit" value="Submit" class="btn">
+          <input type="reset" value="Reset" class="btn">
+        </td>
+      </tr>
+    </table>
+  </form>
+
+  <h3>Profil Ekstrakurikuler</h3>
+  <p>Berikut beberapa dokumentasi kegiatan ekstrakurikuler:</p>
+
+  <!-- Menyisipkan gambar -->
+  <img src="ekstra1.jpg" alt="Foto Kegiatan 1" width="250">
+  <img src="ekstra2.jpg" alt="Foto Kegiatan 2" width="250">
+
+  <br><br>
+
+  <!-- Menyisipkan video -->
+  <video width="320" height="240" controls>
+    <source src="kegiatan1.mp4" type="video/mp4">
+    Browser Anda tidak mendukung pemutaran video.
+  </video>
+
+  <video width="320" height="240" controls>
+    <source src="kegiatan2.mp4" type="video/mp4">
+    Browser Anda tidak mendukung pemutaran video.
+  </video>
+
+</body>
+</html>
